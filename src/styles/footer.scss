@@ -1,0 +1,20 @@
+.footer {
+  background: #08664f;
+  &__wrapper {
+    height: 144px;
+    margin-top: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__icons {
+    display: flex;
+    gap: 15px;
+  }
+  &__links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 240px;
+  }
+}

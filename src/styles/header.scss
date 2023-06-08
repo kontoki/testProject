@@ -1,0 +1,161 @@
+.header {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 0 12px 0;
+  }
+  &__left-side {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+  &__placeholder {
+    display: flex;
+    gap: 3px;
+    img {
+      width: 15px;
+      height: 20px;
+    }
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      color: #868686;
+    }
+  }
+  &__right-side {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #364844;
+    }
+  }
+  &__bot-side {
+    background: #1fa181;
+    padding: 10px 0;
+  }
+}
+
+.header-media {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  &__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+
+    span {
+      position: absolute;
+      background-color: #1fa181;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      top: 8px;
+    }
+  }
+  &__burger:before,
+  &__burger:after {
+    content: "";
+    background-color: #1fa181;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  &__burger:before {
+    top: 0;
+  }
+  &__burger:after {
+    bottom: 0;
+  }
+  &__burger.active:before {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+  &__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 8px;
+  }
+  &__burger.active span {
+    transform: scale(0);
+    transition: all 0.3s ease 0s;
+  }
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    padding: 15px 19px;
+    img {
+      z-index: 3;
+    }
+  }
+  &__contacts {
+    z-index: 3;
+  }
+  &__phone {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #364844;
+  }
+  &__adress {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: right;
+    color: #364844;
+  }
+  &__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(69, 146, 127, 0.9);
+    padding: 115px 0 10px 20px;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+    button {
+      background: #f6f6f6;
+      color: #1fa181;
+      margin-top: 40px;
+    }
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__menu.active {
+    top: 0;
+  }
+}
+.header-media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  z-index: 2;
+}

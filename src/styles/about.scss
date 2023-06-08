@@ -1,0 +1,27 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 165px;
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 415px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    color: #364844;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #364844;
+  }
+  img {
+    max-width: 50%;
+  }
+}

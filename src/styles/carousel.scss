@@ -1,0 +1,108 @@
+.carousel {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 440px;
+  }
+
+  &__offer {
+    height: 100%;
+    background: #e2f0ef;
+    padding: 54px 64px;
+    position: relative;
+    h2 {
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 49px;
+      text-transform: uppercase;
+      color: #364844;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px;
+      color: #364844;
+    }
+  }
+  &__offer::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 100%;
+    background: #e2f0ef;
+    top: 0;
+    right: 0;
+    transform-origin: top left;
+    transform: skewX(15deg);
+  }
+
+  &__items {
+    margin-top: 16px;
+  }
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #364844;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+  &__item::marker {
+    color: #1fa181;
+  }
+  &__price {
+    margin-top: 33px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #364844;
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration-line: line-through;
+      color: #868686;
+    }
+  }
+  &__btns {
+    margin-top: 37px;
+    display: flex;
+    gap: 14px;
+  }
+  &__slide-clicker {
+    margin-top: 35px;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #364844;
+    span {
+      display: inline;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      color: #c0c0c0;
+    }
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
